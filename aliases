@@ -1,3 +1,3 @@
 GIT_REPOSITORY=$(pwd)
 ASM_PATH="$(pwd)/Prog"
-alias compile="$GIT_REPOSITORY/compiler.sh"
+alias compile="$GIT_REPOSITORY/compiler.sh $GIT_REPOSITORY $ASM_PATH"
