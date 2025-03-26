@@ -1,10 +1,11 @@
-echo "compiling"
+#!/bin/bash
 
-if [ -z "$1" ] || [ -z "$2" ] || [ -z "$3" ]
-then
+set -euo pipefail
+if [ "$#" -ne 3 ]; then
 	echo "Usage $0 <project_path> <emulator_path> <filename>"
 	exit 1
 fi
+echo "compiling..."
 
 FILENAME="${3%.asm}"
 
