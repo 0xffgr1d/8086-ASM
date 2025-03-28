@@ -8,13 +8,17 @@ usage() {
   exit 1
 }
 
-if [ "$#" -ne 3 ]; then
+if [ "$#" -lt 3 ]; then
   usage
 fi
 
 PROJECT_PATH="$1"
 EMULATOR_PATH="$2"
 INPUT_FILE="$3"
+shift
+shift
+shift
+ARGUMENTS="$@"
 
 if [ ! -d "$PROJECT_PATH" ]; then
   echo "Error: Project path '$PROJECT_PATH' does not exist or is not a directory."
@@ -51,6 +55,6 @@ fi
 echo "Compiling $INPUT_FILE..."
 (
   cd "$PROJECT_PATH" &&
-    dosbox-x -c "cd $EMULATED_PATH" -c "tasm $FILENAME" -c "tlink $FILENAME"
+    dosbox-x -c "cd $EMULATED_PATH" -c "tasm $FILENAME" -c "tlink $FILENAME" -c "$FILENAME $ARGUMENTS"
 )
 echo "Compilation completed successfully."
