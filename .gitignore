@@ -1,3 +1,7 @@
 /.dosbox/*
+# FreeDOS img
+*.img
+*.iso
 # This is here as not to distribute examples I copy/pasted
 Prog/PVZ*
+
