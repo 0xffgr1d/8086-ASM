@@ -125,7 +125,7 @@ PrintReg PROC
 	mov	dx,cx
 	call	Print
 
-	pop	dx
+	pop	bx
 	call	PrintHex16
 
 	mov	dx,OFFSET endl
