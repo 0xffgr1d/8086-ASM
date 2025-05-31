@@ -12,8 +12,9 @@ cd $PROJECT_PATH
 mount -o loop,offset=32256,uid=$UID ms-dos.img ./ms-dos
 cp ./ms-dos/AUTOEXEC.BAT ./ms-dos/AUTOEXEC.BAT.BKP
 
+sed -i '/@ECHO OFF/d' ./ms-dos/AUTOEXEC.BAT
 printf "D:\r\n" >> ./ms-dos/AUTOEXEC.BAT
-printf "@ECHO ON\r\n" >> ./ms-dos/AUTOEXEC.BAT
+EMULATED_PATH="${EMULATED_PATH//\//\\}"
 printf "cd $EMULATED_PATH\r\n" >> ./ms-dos/AUTOEXEC.BAT
 printf "tasm $FILENAME\r\n" >> ./ms-dos/AUTOEXEC.BAT
 printf "tlink $FILENAME\r\n" >> ./ms-dos/AUTOEXEC.BAT
