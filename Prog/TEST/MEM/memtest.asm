@@ -10,7 +10,7 @@ LOCALS @@
 
 .DATA
 
-	memSize	 dw 0, 1
+	memSize	 dw 0, 10h
 	memPtr	dw 0, 0
 	endl db 13,10,'$'	; string to print
 	regax db "ax",9,"$"

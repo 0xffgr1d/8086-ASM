@@ -52,14 +52,11 @@ if ! command -v dosbox-x &>/dev/null; then
 fi
 
 
-# Compilation process on dosbox-x
-dosbox-xDOS() {
-	(
-		cd "$PROJECT_PATH" &&
-		dosbox-x --noautoexec -c "mount C ./Tasm" -c "PATH=%PATH%;C:\\" -c "mount D ./Prog" -c "D:" -c "cd $EMULATED_PATH" -c "tasm $FILENAME" -c "tlink $FILENAME" -c "$FILENAME $ARGUMENTS"
-	)
-}
-
 echo "Compiling $INPUT_FILE..."
-dosbox-xDOS
+if [ -f "$PROJECT_PATH/ms-dos.img" ]; then
+	sudo $PROJECT_PATH/ms-dos.sh $PROJECT_PATH $EMULATED_PATH $FILENAME $ARGUMENTS
+else
+	$PROJECT_PATH/dosbox-x.sh $PROJECT_PATH $EMULATED_PATH $FILENAME $ARGUMENTS
+fi
+
 echo "Compilation completed successfully."
