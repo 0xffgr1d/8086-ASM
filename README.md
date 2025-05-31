@@ -35,4 +35,4 @@ if ms-dos is set up it will be preffered over plain dosbox-x, but will require r
 
 ## ms-dos installation
 extract disk images from downloaded archive to main directory and run ./install.sh  
-
+when prompted with floppy drive swap on the top menu select `DOS->Swap floppy drive` or use `F12`+`O` unless you have mapped it to something else
