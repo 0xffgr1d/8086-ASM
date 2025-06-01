@@ -11,7 +11,7 @@ cd $PROJECT_PATH
 [[ -d "ms-dos" ]] || mkdir "ms-dos"
 mount -o loop,offset=32256,uid=$UID ms-dos.img ./ms-dos
 
-cp ./Tasm ./ms-dos/DOS
+cp ./Tasm/* ./ms-dos/DOS
 cp ./ms-dos/AUTOEXEC.BAT ./ms-dos/AUTOEXEC.BAT.BKP
 
 sed -i '/@ECHO OFF/d' ./ms-dos/AUTOEXEC.BAT
