@@ -27,6 +27,8 @@ printf "$FILENAME $ARGUMENTS\r\n" >> ./ms-dos/AUTOEXEC.BAT
 sed -i '1s/^/SHELL=C:\\DOS\\COMMAND.COM C:\\DOS \/P \/E:512\r\n/' ./ms-dos/CONFIG.SYS
 
 
+unix2dos ./ms-dos/AUTOEXEC.BAT
+unix2dos ./ms-dos/CONFIG.SYS
 dosbox-x --noautoexec -c "imgmount 0 -fs none -t floppy empty" -c "imgmount C ms-dos.img -ide 1m" -c "mount d ./Prog" -c "boot C:"
 
 cp ./AUTOEXEC.BAT.BKP ./ms-dos/AUTOEXEC.BAT
