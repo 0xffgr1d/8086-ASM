@@ -24,7 +24,9 @@ printf "$FILENAME $ARGUMENTS\r\n" >> ./ms-dos/AUTOEXEC.BAT
 
 
 unix2dos ./ms-dos/AUTOEXEC.BAT
+umount ./ms-dos
 dosbox-x --noautoexec -c "imgmount 0 -fs none -t floppy empty" -c "imgmount C ms-dos.img -ide 1m" -c "mount d ./Prog" -c "boot C:"
+mount -o loop,offset=32256,uid=$UID ms-dos.img ./ms-dos
 
 cp ./AUTOEXEC.BAT.BKP ./ms-dos/AUTOEXEC.BAT
 rm ./AUTOEXEC.BAT.BKP
