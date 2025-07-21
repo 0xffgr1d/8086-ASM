@@ -36,3 +36,16 @@ if ms-dos is set up it will be preffered over plain dosbox-x, but will require r
 ## ms-dos installation
 extract disk images from downloaded archive to main directory and run ./install.sh  
 when prompted with floppy drive swap on the top menu select `DOS->Swap floppy drive` or use `F12`+`O` unless you have mapped it to something else
+
+## useful materials
+learning material:  
+[VU links to materials (lithuanian page)](https://klevas.mif.vu.lt/~linas1/KompArch/Nuorodos.html)  
+[VU introduction to 8086 programming (lithuanian page)](https://klevas.mif.vu.lt/~linas1/KompArch/AsmProg.pdf)  
+[DOS interrupt services](https://www.stanislavs.org/helppc/idx_interrupt.html)  
+[DOS error codes](https://www.stanislavs.org/helppc/dos_error_codes.html)  
+[8-bit ascii table](https://upload.wikimedia.org/wikipedia/commons/8/81/Table_ascii_extended.png)  
+
+learning exercises (all in lithuanian):  
+[VU homework 1](https://klevas.mif.vu.lt/~julius/2011Rud/KompArch/Uzd1.html)  
+[VU homework 2](https://klevas.mif.vu.lt/~julius/2011Rud/KompArch/Uzd2.html)  
+[VU homework 3](https://klevas.mif.vu.lt/~julius/2011Rud/KompArch/Uzd3.html)  
